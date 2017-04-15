@@ -10,3 +10,4 @@ public class SpringHomeAppProjectApplication {
 		SpringApplication.run(SpringHomeAppProjectApplication.class, args);
 	}
 }
+	
