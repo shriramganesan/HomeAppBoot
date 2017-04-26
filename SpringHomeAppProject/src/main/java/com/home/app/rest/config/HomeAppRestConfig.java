@@ -14,10 +14,10 @@ import com.home.app.rest.services.StaticService;
 @ApplicationPath("/homeapp")
 public class HomeAppRestConfig extends ResourceConfig{
 	public HomeAppRestConfig() {
-        //packages("com.home.app.rest.services");
-		register(BillsService.class);
+        packages("com.home.app.rest.services");
+		/*register(BillsService.class);
 		register(SanityService.class);
-		register(StaticService.class);
+		register(StaticService.class);*/
         property(ServerProperties.TRACING, "ALL");
     }
 }
