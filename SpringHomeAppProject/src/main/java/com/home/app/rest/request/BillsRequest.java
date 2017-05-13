@@ -16,7 +16,16 @@ public class BillsRequest {
 	private String description;
 	private String billImage;
 	private String email;
+	private String deviceId;
 	
+	
+	
+	public String getDeviceId() {
+		return deviceId;
+	}
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
+	}
 	public String getEmail() {
 		return email;
 	}

@@ -2,8 +2,10 @@ package com.home.app.rest.services;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.TimeZone;
 import java.util.UUID;
 
 import javax.ws.rs.FormParam;
@@ -11,6 +13,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.MediaType;
 
 import org.slf4j.Logger;
@@ -28,8 +31,6 @@ import com.home.app.entities.LoginEntity;
 import com.home.app.exception.UserNotFoundException;
 import com.home.app.repository.BillsRepoImpl;
 import com.home.app.repository.CategoryRepoImpl;
-import com.home.app.repository.LoginHistoryRepoImpl;
-import com.home.app.repository.LoginRepoImpl;
 import com.home.app.repository.ModeRepoImpl;
 import com.home.app.rest.request.BillsRequest;
 import com.home.app.rest.request.ResponseMessage;
@@ -55,10 +56,13 @@ public class BillsService {
 	PushNotificationService pushNotificationService;
 	
 	@Autowired
-	LoginRepoImpl loginRepoImpl;
+	LoginService loginRepoImpl;
 	
-	@Autowired
-	LoginHistoryRepoImpl loginHistoryRepoImpl;
+	
+	
+	
+	
+	
 	
 	@GET
 	@Path("deleteAll")
@@ -69,31 +73,39 @@ public class BillsService {
 	@GET
 	@Path("getBills")
 	@Produces(MediaType.APPLICATION_JSON)
-	public List<BillsEntity> getBillEnteries(){		
-		return billsRepoImpl.findAll();
+	public List<BillsEntity> getBillEnteries() throws UserNotFoundException{		
+		LoginEntity user= this.loginRepoImpl.checkLogin(this.loginRepoImpl.getUserName());
+		List<BillsEntity> list = billsRepoImpl.findByLoginEntity(user);
+		list.sort((b1,b2) -> {
+			if(b1.getBillDate().compareTo(b2.getBillDate()) < 0){
+				return -1;
+			}
+			else{
+				return 1;
+			}
+		});
+		return list;
 	}
-	
+	@GET
+	@Path("getBillById")
+	@Produces(MediaType.APPLICATION_JSON)
+	public BillsEntity getBillById(@QueryParam("id") String id) throws UserNotFoundException{		
+		//LoginEntity user= this.loginRepoImpl.checkLogin(this.loginRepoImpl.getUserName());
+		BillsEntity b =  billsRepoImpl.findById(id);
+		if(!b.getLoginEntity().getEmail().equals(this.loginRepoImpl.getUserName())){
+			throw new UserNotFoundException("Bill Not Matching with User Email");
+		}
+		return b;
+		
+	}
 	@POST
 	@Path("device")
 	public void device(@FormParam("deviceId") String deviceId){
 		pushNotificationService.setDeviceToken(deviceId);
 		System.out.println(deviceId +"<<<<");
 	}
-	@POST
-	@Path("deleteBill")
-	@Produces(MediaType.APPLICATION_JSON)
-	public ResponseMessage deleteBill(@RequestParam BillsRequest billEntity){
-		ResponseMessage s=new ResponseMessage();
-		billsRepoImpl.delete(billsRepoImpl.findOne(billEntity.getId()));
-		s.setSuccess(true);
-		return s;
-	}
-	@POST
-	@Path("updateBill")
-	@Produces(MediaType.APPLICATION_JSON)
-	public ResponseMessage updateBill(@RequestParam BillsRequest billEntity){
-		return this.submitBillEnteries(billEntity);
-	}
+	
+	
 	
 	
 	@POST
@@ -108,13 +120,7 @@ public class BillsService {
 		}
 		return new Sanity(true);	
 	}
-	protected LoginEntity checkLogin(String email) throws UserNotFoundException{
-		LoginEntity user=loginRepoImpl.findByEmail(email);
-		if(user == null){
-			throw new UserNotFoundException("User Not Registered");
-		}
-		return user;
-	}
+	
 	protected CategoryEntity checkCategory(String category){
 		if(categoryRepoImpl.findByCategoryName(category)==null){
 			CategoryEntity newCat=new CategoryEntity();
@@ -129,7 +135,8 @@ public class BillsService {
 		
 	}
 	@Transactional
-	protected void saveBillEntry(BillsRequest billRequest) throws ParseException{
+	protected void saveBillEntry(BillsRequest billRequest) throws ParseException, UserNotFoundException{
+		LoginEntity user= this.loginRepoImpl.checkLogin(this.loginRepoImpl.getUserName());		
 		CategoryEntity cat=this.checkCategory(billRequest.getCategory());
 		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");	
 		BillsEntity b= new BillsEntity();
@@ -142,52 +149,67 @@ public class BillsService {
 		b.setBillImage(billRequest.getBillImage());
 		b.setLocation(billRequest.getLocation());
 		b.setBillDate(sf.parse(billRequest.getBillDateTime()));
-		HomeAppUtility.setAuditInfo(b, "A", billRequest.getEmail());
+		b.setLoginEntity(user);
+		if(!StringUtils.isEmpty(billRequest.getId())){
+			b.setId(billRequest.getId());
+			HomeAppUtility.setAuditInfo(b, "U", billRequest.getEmail());
+		}
+		else{
+			HomeAppUtility.setAuditInfo(b, "A", billRequest.getEmail());
+		}
 		billsRepoImpl.save(b);
 	}
 	
 	@POST
 	@Path("submit")
 	@Produces(MediaType.APPLICATION_JSON)
-	public ResponseMessage submitBillEnteries(@RequestParam BillsRequest billEntity){
+	public ResponseMessage submitBillEnteries(@RequestParam BillsRequest billRequest){
 		ResponseMessage s=new ResponseMessage();
+		SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");	
+		SimpleDateFormat sf2=new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 		try{
-			SimpleDateFormat sf=new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");	
-			SimpleDateFormat sf2=new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");	
-			BillsEntity b= new BillsEntity();
-			b.setAmount(Double.parseDouble(billEntity.getAmount()));
-			b.setCreatedOn(new Date());
-			b.setDescription(billEntity.getDescription());
-			b.setShopName(billEntity.getShopName());
-			if(categoryRepoImpl.findByCategoryName(billEntity.getCategory())==null){
-				CategoryEntity newCat=new CategoryEntity();
-				newCat.setCategoryName(billEntity.getCategory());
-				newCat.setCreatedOn(new Date());
-				newCat.setId(UUID.randomUUID().toString());
-				categoryRepoImpl.save(newCat);
-				b.setCategoryId(newCat);
-			}else{
-				b.setCategoryId(categoryRepoImpl.findByCategoryName(billEntity.getCategory()));
-			}			
-			b.setModeOfPayment(modeRepoImpl.findOne(billEntity.getModeOfPayment()));
-			b.setBillImage(billEntity.getBillImage());
-			b.setLocation(billEntity.getLocation());
-			b.setBillDate(sf.parse(billEntity.getBillDateTime()));
-			if(!StringUtils.isEmpty(billEntity.getId())){
-				b.setId(billEntity.getId());
-			}			
-			LOGGER.debug(billEntity.toString());
-			billsRepoImpl.save(b);			
-			pushNotificationService.submitTask(String.format(MESSAGE_FORMAT,billEntity.getAmount(),sf2.format(b.getBillDate())));
+			saveBillEntry(billRequest);
+			String deviceId = loginRepoImpl.getDeviceId(loginRepoImpl.getUserName());
+			System.out.println(deviceId);
+			if(deviceId != null){
+			pushNotificationService.
+				submitTask(String.format(MESSAGE_FORMAT,billRequest.getAmount(),
+						sf2.format(sf.parse(billRequest.getBillDateTime()))),deviceId);
+			}
 			s.setSuccess(true);
 			System.out.println("success");
 			return s;	
 		}
 		catch(Exception e){
 			System.out.println("error");
-			//LOGGER.error("Error in Bill Entry",e);
+			LOGGER.error("Error in Bill Entry",e);
 			s.setMessage(e.getMessage());
 			return s;	
 		}
+	}
+	@POST
+	@Path("deleteBill")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ResponseMessage deleteBill(@RequestParam BillsRequest billEntity) throws UserNotFoundException{
+		LoginEntity user= this.loginRepoImpl.checkLogin(this.loginRepoImpl.getUserName());
+		BillsEntity bill= billsRepoImpl.findOne(billEntity.getId()); 
+		ResponseMessage s=new ResponseMessage();
+		if(bill.getLoginEntity().getEmail().equals(user.getEmail())){
+			billsRepoImpl.delete(bill);
+			s.setSuccess(true);
+			return s;
+		}
+		throw new UserNotFoundException("User Email Id Mismatch");		
+	}
+	@POST
+	@Path("updateBill")
+	@Produces(MediaType.APPLICATION_JSON)
+	public ResponseMessage updateBill(@RequestParam BillsRequest billEntity) throws UserNotFoundException{
+		LoginEntity user= this.loginRepoImpl.checkLogin(this.loginRepoImpl.getUserName());
+		BillsEntity bill= billsRepoImpl.findOne(billEntity.getId()); 
+		if(bill.getLoginEntity().getEmail().equals(user.getEmail())){
+			return this.submitBillEnteries(billEntity);
+		}
+		throw new UserNotFoundException("User Email Id Mismatch");	
 	}
 }

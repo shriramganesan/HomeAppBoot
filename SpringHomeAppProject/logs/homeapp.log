@@ -1,0 +1,297 @@
+01/May/2017 21:33:29,901- SpringBootTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.home.app.SpringHomeAppProjectApplicationTests], using SpringBootContextLoader
+01/May/2017 21:33:29,914- AbstractContextLoader: Could not detect default resource locations for test class [com.home.app.SpringHomeAppProjectApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01/May/2017 21:33:29,917- AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.home.app.SpringHomeAppProjectApplicationTests]: SpringHomeAppProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01/May/2017 21:33:30,109- SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.home.app.SpringHomeAppProjectApplication for test class com.home.app.SpringHomeAppProjectApplicationTests
+01/May/2017 21:33:30,127- SpringBootTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+01/May/2017 21:33:30,174- SpringBootTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@e7edb54, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@378542de, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3738449f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@69e1dd28, org.springframework.test.context.transaction.TransactionalTestExecutionListener@11bd0f3b, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c333c60, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@79da8dc5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1eb5174b, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@67080771, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@72cde7cc, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@5fd4f8f5, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@696da30b]
+01/May/2017 21:33:30,189- SpringBootTestContextBootstrapper: Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.home.app.SpringHomeAppProjectApplicationTests], using SpringBootContextLoader
+01/May/2017 21:33:30,191- AbstractContextLoader: Could not detect default resource locations for test class [com.home.app.SpringHomeAppProjectApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01/May/2017 21:33:30,192- AnnotationConfigContextLoaderUtils: Could not detect default configuration classes for test class [com.home.app.SpringHomeAppProjectApplicationTests]: SpringHomeAppProjectApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01/May/2017 21:33:30,203- SpringBootTestContextBootstrapper: Found @SpringBootConfiguration com.home.app.SpringHomeAppProjectApplication for test class com.home.app.SpringHomeAppProjectApplicationTests
+01/May/2017 21:33:30,214- SpringBootTestContextBootstrapper: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+01/May/2017 21:33:30,221- SpringBootTestContextBootstrapper: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@4a7f959b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@429bffaa, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@5403f35f, org.springframework.test.context.support.DirtiesContextTestExecutionListener@483f6d77, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7e5afaa6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@63a12c68, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@28f3b248, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@1b1426f4, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@32b260fa, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@581ac8a8, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6d4e5011, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@57d7f8ca]
+01/May/2017 21:33:30,780- SpringHomeAppProjectApplicationTests: Starting SpringHomeAppProjectApplicationTests on ShriramPC with PID 3360 (started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+01/May/2017 21:33:30,781- SpringHomeAppProjectApplicationTests: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+01/May/2017 21:33:30,781- SpringHomeAppProjectApplicationTests: No active profile set, falling back to default profiles: default
+01/May/2017 21:33:30,835- GenericWebApplicationContext: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@7354b8c5: startup date [Mon May 01 21:33:30 IST 2017]; root of context hierarchy
+01/May/2017 21:33:31,976- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+01/May/2017 21:33:32,735- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+01/May/2017 21:33:32,822- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$157b162f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01/May/2017 21:33:32,992- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+01/May/2017 21:33:33,945- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+01/May/2017 21:33:33,948- cluster: Adding discovered server localhost:27017 to client view of cluster
+01/May/2017 21:33:34,052- connection: Opened connection [connectionId{localValue:1, serverValue:109}] to localhost:27017
+01/May/2017 21:33:34,056- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=989002}
+01/May/2017 21:33:34,057- cluster: Discovered cluster type of STANDALONE
+01/May/2017 21:33:34,667- connection: Opened connection [connectionId{localValue:2, serverValue:110}] to localhost:27017
+01/May/2017 21:33:34,890- LoadMasterData: Master Data Loaded for Category with size 11
+01/May/2017 21:33:34,906- LoadMasterData: Master Data Loaded for Modes with size 4
+01/May/2017 21:33:34,975- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+01/May/2017 21:33:35,903- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@f1dd5b4, org.springframework.security.web.context.SecurityContextPersistenceFilter@58015e56, org.springframework.security.web.header.HeaderWriterFilter@68ed3f30, org.springframework.security.web.authentication.logout.LogoutFilter@2daf06fc, com.home.app.security.GoogleLoginAuthenticationFilter@73809e7, com.home.app.security.JWTAuthenticationFilter@5f96f6a2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7426a448, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@47b11ec7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@48df4071, org.springframework.security.web.session.SessionManagementFilter@42aae04d, org.springframework.security.web.access.ExceptionTranslationFilter@3a8d467e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6dc9da2d]
+01/May/2017 21:33:36,831- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@7354b8c5: startup date [Mon May 01 21:33:30 IST 2017]; root of context hierarchy
+01/May/2017 21:33:37,026- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+01/May/2017 21:33:37,029- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+01/May/2017 21:33:37,106- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01/May/2017 21:33:37,107- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01/May/2017 21:33:37,181- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+01/May/2017 21:33:37,412- AuthenticationManagerConfiguration: 
+
+Using default security password: a6b5443e-914b-4da6-b246-e4097eeb5a4d
+
+01/May/2017 21:33:37,868- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+01/May/2017 21:33:37,887- SpringHomeAppProjectApplicationTests: Started SpringHomeAppProjectApplicationTests in 7.508 seconds (JVM running for 9.351)
+01/May/2017 21:33:38,044- GenericWebApplicationContext: Closing org.springframework.web.context.support.GenericWebApplicationContext@7354b8c5: startup date [Mon May 01 21:33:30 IST 2017]; root of context hierarchy
+09/May/2017 23:54:46,973- SpringHomeAppProjectApplication: Starting SpringHomeAppProjectApplication on ShriramPC with PID 6288 (C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject\target\classes started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+09/May/2017 23:54:47,030- SpringHomeAppProjectApplication: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+09/May/2017 23:54:47,030- SpringHomeAppProjectApplication: No active profile set, falling back to default profiles: default
+09/May/2017 23:54:47,222- AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Tue May 09 23:54:47 IST 2017]; root of context hierarchy
+09/May/2017 23:54:49,604- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+09/May/2017 23:54:50,387- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+09/May/2017 23:54:50,452- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$dd7d3ca] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09/May/2017 23:54:50,666- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+09/May/2017 23:54:53,783- TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8080 (http)
+09/May/2017 23:54:53,822- StandardService: Starting service Tomcat
+09/May/2017 23:54:53,825- StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.11
+09/May/2017 23:54:54,994- [/]: Initializing Spring embedded WebApplicationContext
+09/May/2017 23:54:54,995- ContextLoader: Root WebApplicationContext: initialization completed in 7805 ms
+09/May/2017 23:54:55,964- FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+09/May/2017 23:54:55,964- FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+09/May/2017 23:54:55,965- FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+09/May/2017 23:54:55,965- FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+09/May/2017 23:54:55,967- DelegatingFilterProxyRegistrationBean: Mapping filter: 'springSecurityFilterChain' to: [/*]
+09/May/2017 23:54:55,968- ServletRegistrationBean: Mapping servlet: 'com.home.app.rest.config.HomeAppRestConfig' to [/homeapp/*]
+09/May/2017 23:54:55,969- ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+09/May/2017 23:54:57,312- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+09/May/2017 23:54:57,334- cluster: Adding discovered server localhost:27017 to client view of cluster
+09/May/2017 23:54:59,206- connection: Opened connection [connectionId{localValue:1, serverValue:111}] to localhost:27017
+09/May/2017 23:54:59,208- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=793533}
+09/May/2017 23:54:59,210- cluster: Discovered cluster type of STANDALONE
+09/May/2017 23:54:59,969- connection: Opened connection [connectionId{localValue:2, serverValue:112}] to localhost:27017
+09/May/2017 23:55:00,509- LoadMasterData: Master Data Loaded for Category with size 11
+09/May/2017 23:55:00,573- LoadMasterData: Master Data Loaded for Modes with size 4
+09/May/2017 23:55:00,652- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+09/May/2017 23:55:01,350- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@250a500b, org.springframework.security.web.context.SecurityContextPersistenceFilter@517a2b0, org.springframework.security.web.header.HeaderWriterFilter@68ab0936, org.springframework.security.web.authentication.logout.LogoutFilter@3d4e405e, com.home.app.security.GoogleLoginAuthenticationFilter@75d982d3, com.home.app.security.JWTAuthenticationFilter@4f89331f, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@36480b2d, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@43af351a, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@618ff5c2, org.springframework.security.web.session.SessionManagementFilter@42b84286, org.springframework.security.web.access.ExceptionTranslationFilter@37df14d1, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6f94fb9d]
+09/May/2017 23:55:01,544- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Tue May 09 23:54:47 IST 2017]; root of context hierarchy
+09/May/2017 23:55:01,698- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+09/May/2017 23:55:01,700- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+09/May/2017 23:55:01,753- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+09/May/2017 23:55:01,754- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+09/May/2017 23:55:01,834- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+09/May/2017 23:55:02,140- AuthenticationManagerConfiguration: 
+
+Using default security password: b024b97e-806b-43ec-b154-c520c2ef70f1
+
+09/May/2017 23:55:02,586- AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+09/May/2017 23:55:02,604- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+09/May/2017 23:55:02,772- TomcatEmbeddedServletContainer: Tomcat started on port(s): 8080 (http)
+09/May/2017 23:55:02,779- SpringHomeAppProjectApplication: Started SpringHomeAppProjectApplication in 17.49 seconds (JVM running for 28.25)
+09/May/2017 23:57:49,707- [/]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+09/May/2017 23:57:49,707- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization started
+09/May/2017 23:57:49,748- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization completed in 40 ms
+09/May/2017 23:57:49,848- GoogleLoginAuthenticationFilter: Request is to process authentication
+09/May/2017 23:58:28,154- GoogleLoginAuthenticationFilter: Request is to process authentication
+09/May/2017 23:58:48,340- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 00:00:49,437- SpringHomeAppProjectApplication: Starting SpringHomeAppProjectApplication on ShriramPC with PID 17332 (C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject\target\classes started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+10/May/2017 00:00:49,444- SpringHomeAppProjectApplication: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+10/May/2017 00:00:49,444- SpringHomeAppProjectApplication: No active profile set, falling back to default profiles: default
+10/May/2017 00:00:49,523- AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 00:00:49 IST 2017]; root of context hierarchy
+10/May/2017 00:00:50,519- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+10/May/2017 00:00:51,207- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10/May/2017 00:00:51,282- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$d328b2fd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 00:00:51,421- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 00:00:52,091- TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8080 (http)
+10/May/2017 00:00:52,109- StandardService: Starting service Tomcat
+10/May/2017 00:00:52,111- StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.11
+10/May/2017 00:00:52,286- [/]: Initializing Spring embedded WebApplicationContext
+10/May/2017 00:00:52,287- ContextLoader: Root WebApplicationContext: initialization completed in 2768 ms
+10/May/2017 00:00:52,901- FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+10/May/2017 00:00:52,902- FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10/May/2017 00:00:52,902- FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10/May/2017 00:00:52,902- FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+10/May/2017 00:00:52,904- DelegatingFilterProxyRegistrationBean: Mapping filter: 'springSecurityFilterChain' to: [/*]
+10/May/2017 00:00:52,905- ServletRegistrationBean: Mapping servlet: 'com.home.app.rest.config.HomeAppRestConfig' to [/homeapp/*]
+10/May/2017 00:00:52,907- ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+10/May/2017 00:00:53,474- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10/May/2017 00:00:53,476- cluster: Adding discovered server localhost:27017 to client view of cluster
+10/May/2017 00:00:53,584- connection: Opened connection [connectionId{localValue:1, serverValue:113}] to localhost:27017
+10/May/2017 00:00:53,587- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=960544}
+10/May/2017 00:00:53,589- cluster: Discovered cluster type of STANDALONE
+10/May/2017 00:00:54,147- connection: Opened connection [connectionId{localValue:2, serverValue:114}] to localhost:27017
+10/May/2017 00:00:54,244- LoadMasterData: Master Data Loaded for Category with size 11
+10/May/2017 00:00:54,258- LoadMasterData: Master Data Loaded for Modes with size 4
+10/May/2017 00:00:54,306- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+10/May/2017 00:00:54,865- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4228bf58, org.springframework.security.web.context.SecurityContextPersistenceFilter@37df14d1, org.springframework.security.web.header.HeaderWriterFilter@4613311f, org.springframework.security.web.authentication.logout.LogoutFilter@1305c126, com.home.app.security.GoogleLoginAuthenticationFilter@68b9834c, com.home.app.security.JWTAuthenticationFilter@20b9d5d5, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7724704f, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@74ecacc3, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@671d1157, org.springframework.security.web.session.SessionManagementFilter@ec8f4b9, org.springframework.security.web.access.ExceptionTranslationFilter@dc4a691, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6c0e13b7]
+10/May/2017 00:00:55,030- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 00:00:49 IST 2017]; root of context hierarchy
+10/May/2017 00:00:55,146- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10/May/2017 00:00:55,149- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10/May/2017 00:00:55,207- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 00:00:55,208- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 00:00:55,276- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 00:00:55,494- AuthenticationManagerConfiguration: 
+
+Using default security password: 029b93d9-6a0f-4226-a28f-74cf7f29eb85
+
+10/May/2017 00:00:55,771- AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+10/May/2017 00:00:55,784- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+10/May/2017 00:00:55,858- TomcatEmbeddedServletContainer: Tomcat started on port(s): 8080 (http)
+10/May/2017 00:00:55,864- SpringHomeAppProjectApplication: Started SpringHomeAppProjectApplication in 6.779 seconds (JVM running for 8.068)
+10/May/2017 00:01:32,081- [/]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+10/May/2017 00:01:32,081- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization started
+10/May/2017 00:01:32,127- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization completed in 45 ms
+10/May/2017 00:01:32,163- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 00:06:28,335- connection: Opened connection [connectionId{localValue:3, serverValue:115}] to localhost:27017
+10/May/2017 00:06:28,356- connection: Opened connection [connectionId{localValue:4, serverValue:116}] to localhost:27017
+10/May/2017 00:20:03,245- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 00:43:06,466- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 00:45:04,602- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 00:51:17,088- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:27:47,620- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:30:41,742- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:31:47,997- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:32:59,183- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:35:06,090- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 01:38:43,450- SpringHomeAppProjectApplication: Starting SpringHomeAppProjectApplication on ShriramPC with PID 9484 (C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject\target\classes started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+10/May/2017 01:38:43,457- SpringHomeAppProjectApplication: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+10/May/2017 01:38:43,458- SpringHomeAppProjectApplication: No active profile set, falling back to default profiles: default
+10/May/2017 01:38:43,538- AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:38:43 IST 2017]; root of context hierarchy
+10/May/2017 01:38:44,505- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+10/May/2017 01:38:45,211- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10/May/2017 01:38:45,273- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$40ed58af] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:38:45,433- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:38:46,085- TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8080 (http)
+10/May/2017 01:38:46,103- StandardService: Starting service Tomcat
+10/May/2017 01:38:46,105- StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.11
+10/May/2017 01:38:46,374- [/]: Initializing Spring embedded WebApplicationContext
+10/May/2017 01:38:46,374- ContextLoader: Root WebApplicationContext: initialization completed in 2840 ms
+10/May/2017 01:38:47,142- FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+10/May/2017 01:38:47,143- FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10/May/2017 01:38:47,144- FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10/May/2017 01:38:47,144- FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+10/May/2017 01:38:47,147- DelegatingFilterProxyRegistrationBean: Mapping filter: 'springSecurityFilterChain' to: [/*]
+10/May/2017 01:38:47,147- ServletRegistrationBean: Mapping servlet: 'com.home.app.rest.config.HomeAppRestConfig' to [/homeapp/*]
+10/May/2017 01:38:47,150- ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+10/May/2017 01:38:47,814- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10/May/2017 01:38:47,815- cluster: Adding discovered server localhost:27017 to client view of cluster
+10/May/2017 01:38:47,915- connection: Opened connection [connectionId{localValue:1, serverValue:117}] to localhost:27017
+10/May/2017 01:38:47,917- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=659179}
+10/May/2017 01:38:47,919- cluster: Discovered cluster type of STANDALONE
+10/May/2017 01:38:48,707- connection: Opened connection [connectionId{localValue:2, serverValue:118}] to localhost:27017
+10/May/2017 01:38:48,816- LoadMasterData: Master Data Loaded for Category with size 11
+10/May/2017 01:38:48,831- LoadMasterData: Master Data Loaded for Modes with size 4
+10/May/2017 01:38:48,880- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+10/May/2017 01:38:49,480- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@75d982d3, org.springframework.security.web.context.SecurityContextPersistenceFilter@53b7ce6, org.springframework.security.web.header.HeaderWriterFilter@3cd9aa64, org.springframework.security.web.authentication.logout.LogoutFilter@54e2fe, com.home.app.security.GoogleLoginAuthenticationFilter@4f89331f, com.home.app.security.JWTAuthenticationFilter@618ff5c2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27d33393, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1305c126, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@16727bf0, org.springframework.security.web.session.SessionManagementFilter@443effcb, org.springframework.security.web.access.ExceptionTranslationFilter@7efb53af, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@17fa1336]
+10/May/2017 01:38:49,672- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:38:43 IST 2017]; root of context hierarchy
+10/May/2017 01:38:49,782- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10/May/2017 01:38:49,783- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10/May/2017 01:38:49,830- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:38:49,830- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:38:49,900- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:38:50,164- AuthenticationManagerConfiguration: 
+
+Using default security password: 8fb8a4b3-31f1-4391-a17f-5b8560c51179
+
+10/May/2017 01:38:50,456- AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+10/May/2017 01:38:50,471- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+10/May/2017 01:38:50,564- TomcatEmbeddedServletContainer: Tomcat started on port(s): 8080 (http)
+10/May/2017 01:38:50,573- SpringHomeAppProjectApplication: Started SpringHomeAppProjectApplication in 7.494 seconds (JVM running for 8.736)
+10/May/2017 01:39:34,491- connection: Opened connection [connectionId{localValue:3, serverValue:119}] to localhost:27017
+10/May/2017 01:52:04,316- SpringHomeAppProjectApplication: Starting SpringHomeAppProjectApplication on ShriramPC with PID 20400 (C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject\target\classes started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+10/May/2017 01:52:04,323- SpringHomeAppProjectApplication: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+10/May/2017 01:52:04,324- SpringHomeAppProjectApplication: No active profile set, falling back to default profiles: default
+10/May/2017 01:52:04,410- AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:52:04 IST 2017]; root of context hierarchy
+10/May/2017 01:52:05,383- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+10/May/2017 01:52:06,076- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10/May/2017 01:52:06,139- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$a31ac96a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:52:06,283- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:52:06,853- TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8080 (http)
+10/May/2017 01:52:06,867- StandardService: Starting service Tomcat
+10/May/2017 01:52:06,869- StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.11
+10/May/2017 01:52:07,048- [/]: Initializing Spring embedded WebApplicationContext
+10/May/2017 01:52:07,048- ContextLoader: Root WebApplicationContext: initialization completed in 2644 ms
+10/May/2017 01:52:07,632- FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+10/May/2017 01:52:07,632- FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10/May/2017 01:52:07,633- FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10/May/2017 01:52:07,633- FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+10/May/2017 01:52:07,635- DelegatingFilterProxyRegistrationBean: Mapping filter: 'springSecurityFilterChain' to: [/*]
+10/May/2017 01:52:07,635- ServletRegistrationBean: Mapping servlet: 'com.home.app.rest.config.HomeAppRestConfig' to [/homeapp/*]
+10/May/2017 01:52:07,637- ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+10/May/2017 01:52:08,199- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10/May/2017 01:52:08,201- cluster: Adding discovered server localhost:27017 to client view of cluster
+10/May/2017 01:52:08,291- connection: Opened connection [connectionId{localValue:1, serverValue:120}] to localhost:27017
+10/May/2017 01:52:08,294- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=820125}
+10/May/2017 01:52:08,296- cluster: Discovered cluster type of STANDALONE
+10/May/2017 01:52:08,968- connection: Opened connection [connectionId{localValue:2, serverValue:121}] to localhost:27017
+10/May/2017 01:52:09,071- LoadMasterData: Master Data Loaded for Category with size 11
+10/May/2017 01:52:09,088- LoadMasterData: Master Data Loaded for Modes with size 4
+10/May/2017 01:52:09,146- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+10/May/2017 01:52:09,718- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44cffc25, org.springframework.security.web.context.SecurityContextPersistenceFilter@68ab0936, org.springframework.security.web.header.HeaderWriterFilter@37df14d1, org.springframework.security.web.authentication.logout.LogoutFilter@7640a5b1, com.home.app.security.GoogleLoginAuthenticationFilter@2a369e14, com.home.app.security.JWTAuthenticationFilter@25aeb5ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42b84286, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f6917fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c755b2, org.springframework.security.web.session.SessionManagementFilter@7724704f, org.springframework.security.web.access.ExceptionTranslationFilter@4613311f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a1d3225]
+10/May/2017 01:52:09,871- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:52:04 IST 2017]; root of context hierarchy
+10/May/2017 01:52:09,978- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10/May/2017 01:52:09,980- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10/May/2017 01:52:10,036- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:52:10,036- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:52:10,101- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:52:10,348- AuthenticationManagerConfiguration: 
+
+Using default security password: c446f3a0-47d6-464b-a248-0d9ecd29b74f
+
+10/May/2017 01:52:10,610- AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+10/May/2017 01:52:10,622- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+10/May/2017 01:52:10,686- TomcatEmbeddedServletContainer: Tomcat started on port(s): 8080 (http)
+10/May/2017 01:52:10,692- SpringHomeAppProjectApplication: Started SpringHomeAppProjectApplication in 6.716 seconds (JVM running for 7.849)
+10/May/2017 01:54:06,221- SpringHomeAppProjectApplication: Starting SpringHomeAppProjectApplication on ShriramPC with PID 19868 (C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject\target\classes started by Shriram in C:\Users\Shriram\git\HomeAppBoot\SpringHomeAppProject)
+10/May/2017 01:54:06,227- SpringHomeAppProjectApplication: Running with Spring Boot v1.5.2.RELEASE, Spring v4.3.7.RELEASE
+10/May/2017 01:54:06,228- SpringHomeAppProjectApplication: No active profile set, falling back to default profiles: default
+10/May/2017 01:54:06,307- AnnotationConfigEmbeddedWebApplicationContext: Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:54:06 IST 2017]; root of context hierarchy
+10/May/2017 01:54:07,330- DefaultListableBeanFactory: Overriding bean definition for bean 'requestContextFilter' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jersey.JerseyAutoConfiguration; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jersey/JerseyAutoConfiguration.class]] with [Root bean: class [org.springframework.boot.autoconfigure.web.WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=requestContextFilter; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/web/WebMvcAutoConfiguration$WebMvcAutoConfigurationAdapter.class]]
+10/May/2017 01:54:08,011- AutowiredAnnotationBeanPostProcessor: JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+10/May/2017 01:54:08,076- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'springHomeAppProjectApplication' of type [com.home.app.SpringHomeAppProjectApplication$$EnhancerBySpringCGLIB$$a31ac96a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:54:08,207- PostProcessorRegistrationDelegate$BeanPostProcessorChecker: Bean 'validator' of type [org.springframework.validation.beanvalidation.LocalValidatorFactoryBean] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+10/May/2017 01:54:08,826- TomcatEmbeddedServletContainer: Tomcat initialized with port(s): 8080 (http)
+10/May/2017 01:54:08,843- StandardService: Starting service Tomcat
+10/May/2017 01:54:08,846- StandardEngine: Starting Servlet Engine: Apache Tomcat/8.5.11
+10/May/2017 01:54:09,034- [/]: Initializing Spring embedded WebApplicationContext
+10/May/2017 01:54:09,034- ContextLoader: Root WebApplicationContext: initialization completed in 2731 ms
+10/May/2017 01:54:09,677- FilterRegistrationBean: Mapping filter: 'characterEncodingFilter' to: [/*]
+10/May/2017 01:54:09,678- FilterRegistrationBean: Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+10/May/2017 01:54:09,678- FilterRegistrationBean: Mapping filter: 'httpPutFormContentFilter' to: [/*]
+10/May/2017 01:54:09,678- FilterRegistrationBean: Mapping filter: 'requestContextFilter' to: [/*]
+10/May/2017 01:54:09,681- DelegatingFilterProxyRegistrationBean: Mapping filter: 'springSecurityFilterChain' to: [/*]
+10/May/2017 01:54:09,682- ServletRegistrationBean: Mapping servlet: 'com.home.app.rest.config.HomeAppRestConfig' to [/homeapp/*]
+10/May/2017 01:54:09,685- ServletRegistrationBean: Mapping servlet: 'dispatcherServlet' to [/]
+10/May/2017 01:54:10,261- cluster: Cluster created with settings {hosts=[localhost:27017], mode=MULTIPLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+10/May/2017 01:54:10,263- cluster: Adding discovered server localhost:27017 to client view of cluster
+10/May/2017 01:54:10,359- connection: Opened connection [connectionId{localValue:1, serverValue:122}] to localhost:27017
+10/May/2017 01:54:10,362- cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[3, 4, 2]}, minWireVersion=0, maxWireVersion=5, maxDocumentSize=16777216, roundTripTimeNanos=933487}
+10/May/2017 01:54:10,364- cluster: Discovered cluster type of STANDALONE
+10/May/2017 01:54:11,051- connection: Opened connection [connectionId{localValue:2, serverValue:123}] to localhost:27017
+10/May/2017 01:54:11,150- LoadMasterData: Master Data Loaded for Category with size 11
+10/May/2017 01:54:11,170- LoadMasterData: Master Data Loaded for Modes with size 4
+10/May/2017 01:54:11,229- ThreadPoolTaskExecutor: Initializing ExecutorService  'pushNotificationTaskExecutor'
+10/May/2017 01:54:11,814- DefaultSecurityFilterChain: Creating filter chain: org.springframework.security.web.util.matcher.AnyRequestMatcher@1, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@44cffc25, org.springframework.security.web.context.SecurityContextPersistenceFilter@68ab0936, org.springframework.security.web.header.HeaderWriterFilter@37df14d1, org.springframework.security.web.authentication.logout.LogoutFilter@7640a5b1, com.home.app.security.GoogleLoginAuthenticationFilter@2a369e14, com.home.app.security.JWTAuthenticationFilter@25aeb5ac, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@42b84286, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1f6917fb, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@c755b2, org.springframework.security.web.session.SessionManagementFilter@7724704f, org.springframework.security.web.access.ExceptionTranslationFilter@4613311f, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@6a1d3225]
+10/May/2017 01:54:12,000- RequestMappingHandlerAdapter: Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@7b02881e: startup date [Wed May 10 01:54:06 IST 2017]; root of context hierarchy
+10/May/2017 01:54:12,110- RequestMappingHandlerMapping: Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+10/May/2017 01:54:12,112- RequestMappingHandlerMapping: Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+10/May/2017 01:54:12,171- SimpleUrlHandlerMapping: Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:54:12,171- SimpleUrlHandlerMapping: Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:54:12,237- SimpleUrlHandlerMapping: Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+10/May/2017 01:54:12,472- AuthenticationManagerConfiguration: 
+
+Using default security password: 7102b568-ea52-48bd-a24c-10ee9b1a040b
+
+10/May/2017 01:54:12,784- AnnotationMBeanExporter: Registering beans for JMX exposure on startup
+10/May/2017 01:54:12,795- DefaultLifecycleProcessor: Starting beans in phase 2147483647
+10/May/2017 01:54:12,877- TomcatEmbeddedServletContainer: Tomcat started on port(s): 8080 (http)
+10/May/2017 01:54:12,886- SpringHomeAppProjectApplication: Started SpringHomeAppProjectApplication in 7.037 seconds (JVM running for 8.232)
+10/May/2017 02:09:31,839- [/]: Initializing Spring FrameworkServlet 'dispatcherServlet'
+10/May/2017 02:09:31,852- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization started
+10/May/2017 02:09:32,002- DispatcherServlet: FrameworkServlet 'dispatcherServlet': initialization completed in 149 ms
+10/May/2017 02:09:32,015- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:09:38,719- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:13:09,605- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:14:15,588- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:19:25,006- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:20:55,230- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:27:34,272- GoogleLoginAuthenticationFilter: Request is to process authentication
+10/May/2017 02:28:53,449- connection: Opened connection [connectionId{localValue:4, serverValue:124}] to localhost:27017
+10/May/2017 02:28:53,451- connection: Opened connection [connectionId{localValue:3, serverValue:125}] to localhost:27017

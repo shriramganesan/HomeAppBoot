@@ -46,9 +46,10 @@ public class PushNotificationService implements ApplicationContextAware{
     }
 
     
-    public void submitTask(String message){    	
+    public void submitTask(String message,String deviceId){    	
     	PushNotificationTask task=(PushNotificationTask)applicationContext.getBean("pushNotificationTask");
     	task.setMessage(message);
+    	task.setDeviceId(deviceId);
     	taskExector.submit(task);
     }
 

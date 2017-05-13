@@ -22,12 +22,20 @@ public class PushNotificationTask implements Callable<String> {
 	
 	@Autowired
 	PushNotificationService pushNotificationService;
-	
+	private String deviceId;
 	private String message;
 	
 	@Override
 	public String call() throws Exception {		
-		return sendPushNotification(TITLE, message);
+		return sendPushNotification(TITLE, message,deviceId);
+	}
+	
+	public String getDeviceId() {
+		return deviceId;
+	}
+
+	public void setDeviceId(String deviceId) {
+		this.deviceId = deviceId;
 	}
 
 	public String getMessage() {
@@ -37,14 +45,14 @@ public class PushNotificationTask implements Callable<String> {
 	public void setMessage(String message) {
 		this.message = message;
 	}
-	public static String sendPushNotification(String title, String message) throws Exception {
+	public static String sendPushNotification(String title, String message, String deviceId) throws Exception {
         //System.out.println(pushNotificationService.getDeviceToken());
 		String pushMessage = "{\"data\":{\"title\":\"" +
                 title +
                 "\",\"message\":\"" +
                 message +
                 "\"},\"to\":\"" +
-                DEVICE_TOKEN +
+                deviceId +
                 "\"}";
         // Create connection to send FCM Message request.
         URL url = new URL("https://fcm.googleapis.com/fcm/send");
@@ -53,12 +61,6 @@ public class PushNotificationTask implements Callable<String> {
         conn.setRequestProperty("Content-Type", "application/json");
         conn.setRequestMethod("POST");
         conn.setDoOutput(true);
-
-        // Send FCM message content.
-      /*  OutputStream outputStream = conn.getOutputStream();
-        outputStream.write(pushMessage.getBytes());
-        System.out.println(conn.getResponseCode());
-        System.out.println(conn.getResponseMessage());*/
         OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
         wr.write(pushMessage.toString());
         wr.flush();
@@ -67,6 +69,6 @@ public class PushNotificationTask implements Callable<String> {
 	public static void main(String[] args) throws Exception {
     	String title = "My Second Notification";
         String message = "Hello, I'm push notification";
-        sendPushNotification(title, message);
+        //sendPushNotification(title, message);
     }
 }

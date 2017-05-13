@@ -11,13 +11,11 @@ public class LoginHistory extends AbstractAuditEntity{
 	@Id
 	private String id;	
 	private LoginEntity loginEntity;
-	@NotNull
 	private String idToken;        
 	private String serverAuthCode;	
 	@NotNull
 	private Date lastLoginDate;
 	private Date loggedOffDate;
-	@NotNull
 	private String deviceId;
 	public String getId() {
 		return id;

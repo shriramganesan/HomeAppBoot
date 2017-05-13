@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.security.GeneralSecurityException;
 import java.util.Collections;
 import java.util.Date;
+import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
@@ -13,8 +15,9 @@ import javax.ws.rs.core.MediaType;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -26,6 +29,7 @@ import com.google.api.client.http.javanet.NetHttpTransport;
 import com.google.api.client.json.jackson2.JacksonFactory;
 import com.home.app.entities.LoginEntity;
 import com.home.app.entities.LoginHistory;
+import com.home.app.exception.UserNotFoundException;
 import com.home.app.repository.LoginHistoryRepoImpl;
 import com.home.app.repository.LoginRepoImpl;
 import com.home.app.rest.request.LoginRequest;
@@ -52,7 +56,7 @@ public class LoginService {
 	}
 	
 	@POST
-	@Path("login")
+	@Path("loginUser")
 	@Produces(MediaType.APPLICATION_JSON)
 	public ResponseMessage loginHomeApp(@RequestParam LoginRequest loginRequest) throws Exception{
 		ResponseMessage r = new ResponseMessage();	
@@ -66,38 +70,48 @@ public class LoginService {
 		return r;		
 	}
 
-	private LoginEntity saveLoginDetails(LoginRequest loginRequest) {
-		LoginEntity l=new LoginEntity();
-		BeanUtils.copyProperties(loginRequest, l);
-		HomeAppUtility.setAuditInfo(l, "A", l.getEmail());
-		loginRepoImpl.save(l);
-		return l;
+	public String getUserName() throws UserNotFoundException{
+		String user = (String)SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+	   // String name = user==null?null:user.getUsername(); //get logged in username
+	    if(user == null){
+			throw new UserNotFoundException("User Not Logged In");
+		}
+	    return user;
 	}
-
-	private void saveLoginHistory(LoginRequest loginRequest,LoginEntity le) {
-		LoginHistory lh=new LoginHistory();
-		BeanUtils.copyProperties(loginRequest, lh);
-		lh.setLoginEntity(le);
-		lh.setLastLoginDate(new Date());
-		HomeAppUtility.setAuditInfo(lh, "A", loginRequest.getEmail());
-		loginHistoryRepoImpl.save(lh);
+	
+	public LoginEntity checkLogin(String email) throws UserNotFoundException{
+		LoginEntity user=loginRepoImpl.findByEmail(email);		
+		if(user == null){
+			throw new UserNotFoundException("User Not Registered");
+		}
+		return user;
 	}
+	public LoginHistory saveLoginHistory(LoginEntity user,String deviceId){
+		LoginHistory loginHistory=new LoginHistory();
+		List<LoginHistory> history=loginHistoryRepoImpl.findByLoginEntity(user);
+		history=history.stream().filter(lh -> lh.getLoggedOffDate() == null).collect(Collectors.toList()); 
+		for(LoginHistory lh:history){
+			lh.setLoggedOffDate(new Date());
+			loginHistoryRepoImpl.save(lh);
+		}
+		loginHistory.setLoginEntity(user);
+		loginHistory.setDeviceId(deviceId);
+		loginHistory.setLastLoginDate(new Date());
+		//loginHistory.setIdToken(idToken);
+		//loginHistory.setServerAuthCode(serverAuthCode);
+		return loginHistoryRepoImpl.save(loginHistory);
+	}
+	
 	@Transactional
 	public void processLogin(LoginRequest loginRequest) throws Exception{
-		GoogleIdToken token;
 		try {
-			token = checkTokenValidity(loginRequest.getIdToken());
-			if(token != null){
-				saveLoginHistory(loginRequest,checkExistingUser(loginRequest));				
-			}
-		} catch (Exception e) {
-			throw e;
-		}
+			this.saveLoginHistory(this.checkLogin(loginRequest.getEmail()), loginRequest.getDeviceId());
+		} catch (UserNotFoundException e) {
+			this.saveLoginHistory(this.createUserLogin(checkTokenValidity(loginRequest.getIdToken()).getPayload())
+					,loginRequest.getDeviceId());					
+		}	
 	}	
-	private LoginEntity checkExistingUser(LoginRequest loginRequest) {
-		LoginEntity login=loginRepoImpl.findByEmail(loginRequest.getEmail());
-		return login!=null?login:saveLoginDetails(loginRequest);		
-	}
+	
 	private GoogleIdToken checkTokenValidity(String idToken) throws GeneralSecurityException, IOException {
 		GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), new JacksonFactory())
 			    .setAudience(Collections.singletonList("801690203554-a66s1qp579m2vbq4gcld660aphr69t6k.apps.googleusercontent.com"))
@@ -135,5 +149,35 @@ public class LoginService {
 			} else {
 			  System.out.println("Invalid ID token.");
 			}
+	}
+
+	public LoginEntity createUserLogin(Payload payload) {
+		  String email = payload.getEmail();
+		  boolean emailVerified = Boolean.valueOf(payload.getEmailVerified());
+		  String name = (String) payload.get("name");
+		  String pictureUrl = (String) payload.get("picture");
+		  String locale = (String) payload.get("locale");
+		  String familyName = (String) payload.get("family_name");
+		  String givenName = (String) payload.get("given_name");
+		  System.out.println(payload.keySet());
+		  LoginEntity newUser=new LoginEntity();
+		  newUser.setEmail(email);
+		  newUser.setDisplayName(name);
+		  newUser.setFamilyName(familyName);
+		  newUser.setGivenName(givenName);
+		  newUser.setImageUrl(pictureUrl);
+		  newUser.setUserId(payload.getUserId());
+		  HomeAppUtility.setAuditInfo(newUser, "A", email);
+		  return loginRepoImpl.save(newUser);
+	}
+
+	public String getDeviceId(String email) throws UserNotFoundException {
+		List<LoginHistory> history=loginHistoryRepoImpl.findByLoginEntity(this.checkLogin(email));
+		List<String> deviceIdList= history.stream().
+				filter(lh -> lh.getLoggedOffDate() == null)
+				.map(LoginHistory::getDeviceId)
+					.collect(Collectors.toList()); 
+		
+		return deviceIdList.isEmpty()?null:deviceIdList.get(0);
 	}
 }
